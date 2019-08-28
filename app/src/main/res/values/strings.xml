@@ -1,3 +1,13 @@
 <resources>
-    <string name="app_name">MyPets</string>
+    <string name="app_name">Adopt Me</string>
+    <string name="home">Home</string>
+    <string name="my_adoption">My Adoptions</string>
+    <string name="about_email">me@evangunawan.com</string>
+    <string name="about_name">Vincentius Evan Gunawan</string>
+    <string name="about_phone">0812-1447-4854</string>
+    <string name="about_project">
+        This project is made for dicoding.com submission.\n
+        Source code is available in github.com/evangunawan.
+
+    </string>
 </resources>

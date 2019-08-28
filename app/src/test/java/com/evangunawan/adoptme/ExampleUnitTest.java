@@ -1,4 +1,4 @@
-package com.evangunawan.mypets;
+package com.evangunawan.adoptme;
 
 import org.junit.Test;
 

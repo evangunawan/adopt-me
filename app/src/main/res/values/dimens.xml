@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="default_padding_x">16dp</dimen>
+    <dimen name="default_padding_x">8dp</dimen>
+    <dimen name="default_padding_y">16dp</dimen>
 </resources>

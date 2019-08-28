@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_vertical">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:layout_width="match_parent"
+        android:layout_height="128dp"
+        tools:src="@drawable/img_avatar" />
+    <TextView
+        style="@style/TextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_name"
+        android:textAlignment="center"
+        android:textSize="20sp"
+        android:paddingTop="8dp"/>
+
+    <TextView
+        android:id="@+id/profile_email"
+        style="@style/TextTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_email"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        style="@style/TextSubtitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/about_phone"
+        android:textAlignment="center"
+        android:textSize="16sp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_marginTop="24dp"
+        android:paddingStart="@dimen/default_padding_x"
+        android:paddingEnd="@dimen/default_padding_x"
+        android:text="@string/about_project"
+        />
+
+
+</LinearLayout>
