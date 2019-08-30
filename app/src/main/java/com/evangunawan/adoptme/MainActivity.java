@@ -3,16 +3,12 @@ package com.evangunawan.adoptme;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
-import androidx.recyclerview.widget.RecyclerView;
 
 import android.os.Bundle;
 import android.view.MenuItem;
 
 import com.evangunawan.adoptme.Home.AdoptionFragment;
-import com.evangunawan.adoptme.model.Pet;
 import com.google.android.material.bottomnavigation.BottomNavigationView;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -24,7 +20,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         botNavView = findViewById(R.id.btm_nav_main);
         loadFragment(new AdoptionFragment());
-        this.setTitle("Available Donations");
+        this.setTitle("Available Adoptions");
 
         botNavView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override

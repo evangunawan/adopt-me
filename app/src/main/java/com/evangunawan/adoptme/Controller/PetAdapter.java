@@ -1,4 +1,4 @@
-package com.evangunawan.adoptme;
+package com.evangunawan.adoptme.Controller;
 
 import android.view.LayoutInflater;
 import android.view.View;
@@ -10,18 +10,27 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.evangunawan.adoptme.model.Pet;
+import com.evangunawan.adoptme.R;
+import com.evangunawan.adoptme.Model.Pet;
 
 import java.util.ArrayList;
 
-public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
+public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder>{
 
-    private LayoutInflater inflater;
+    public interface ItemClickListener {
+        void onItemClick(Pet item);
+    }
+
     private ArrayList<Pet> pets;
+    private ItemClickListener listener;
 
     public PetAdapter(ArrayList<Pet> data){
 //        this.inflater = LayoutInflater.from(context);
         this.pets = data;
+    }
+
+    public void setOnClickListener(ItemClickListener listener){
+        this.listener = listener;
     }
 
     @NonNull
@@ -29,6 +38,7 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
     public PetViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
 //        View view = inflater.inflate(R.layout.pet_list_item,parent,false);
         View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.pet_list_item,parent,false);
+
         PetViewHolder vh = new PetViewHolder(view);
         return vh;
     }
@@ -41,12 +51,18 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
         holder.petTitle.setText(petItem.getPetTitle());
         holder.petSubtitle.setText(petSubtitle);
 
-        Glide.with(holder.itemView.getContext()).load(petItem.getPetPhoto()).into(holder.petImage);
+        Glide.with(holder.itemView.getContext()).load(petItem.getThumbnail()).into(holder.petImage);
+
+        holder.bindListener(pets.get(position), listener);
     }
 
     @Override
     public int getItemCount() {
         return pets.size();
+    }
+
+    String getItemTitle(int id){
+        return pets.get(id).getPetTitle();
     }
 
     public static class PetViewHolder extends RecyclerView.ViewHolder{
@@ -59,11 +75,15 @@ public class PetAdapter extends RecyclerView.Adapter<PetAdapter.PetViewHolder> {
             petSubtitle = v.findViewById(R.id.petSubtitle);
             petImage = v.findViewById(R.id.petImage);
         }
-    }
 
-    String getItemTitle(int id){
-        return pets.get(id).getPetTitle();
+        public void bindListener(final Pet item, final ItemClickListener listener){
+            itemView.setOnClickListener(new View.OnClickListener(){
+                @Override
+                public void onClick(View v) {
+                    listener.onItemClick(item);
+                }
+            });
+        }
     }
-
 
 }
