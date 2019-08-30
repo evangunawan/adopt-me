@@ -56,8 +56,16 @@ public class AdoptionFragment extends Fragment {
 
     private void initPetData(){
         pets = new ArrayList<>();
-        pets.add(new Pet("Nobi","Dog","Pomeranian","https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg"));
+        ArrayList<String> petCarouselImgs = new ArrayList<>();
+        petCarouselImgs.add("https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg");
+        petCarouselImgs.add("https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg");
 
-        pets.add(new Pet("Bella", "Dog", "Pomeranian", "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg"));
+        Pet nobi = new Pet("Nobi","Dog","Pomeranian","https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg");
+        nobi.setCarouselImageUrl(petCarouselImgs);
+        pets.add(nobi);
+
+        Pet bella = new Pet("Bella", "Dog", "Pomeranian", "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg");
+        bella.setCarouselImageUrl(petCarouselImgs);
+        pets.add(bella);
     }
 }
