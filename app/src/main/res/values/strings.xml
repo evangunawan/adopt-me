@@ -10,4 +10,8 @@
         Source code is available in github.com/evangunawan.
 
     </string>
+    <string name="textAdopt">ADOPT</string>
+    <string name="txtDesc">Description</string>
+
+    <string name="about_me">About me</string>
 </resources>

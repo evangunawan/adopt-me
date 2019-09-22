@@ -6,7 +6,7 @@
         android:icon="@drawable/ic_home_black_24dp"/>
 
     <item
-        android:id="@+id/account_menu"
+        android:id="@+id/adopted_pet_menu"
         android:title="@string/my_adoption"
         android:icon="@drawable/ic_person_black_24dp"/>
 

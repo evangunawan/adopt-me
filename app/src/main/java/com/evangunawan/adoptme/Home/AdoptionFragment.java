@@ -1,8 +1,6 @@
 package com.evangunawan.adoptme.Home;
 
 import android.content.Intent;
-import android.graphics.Bitmap;
-import android.graphics.drawable.Drawable;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -18,10 +16,10 @@ import com.evangunawan.adoptme.Controller.PetAdapter;
 import com.evangunawan.adoptme.PetDetailActivity;
 import com.evangunawan.adoptme.R;
 import com.evangunawan.adoptme.Model.Pet;
-import com.squareup.picasso.Picasso;
-import com.squareup.picasso.Target;
+import com.evangunawan.adoptme.Util.PetLoader;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 
 public class AdoptionFragment extends Fragment {
 
@@ -55,17 +53,11 @@ public class AdoptionFragment extends Fragment {
     }
 
     private void initPetData(){
-        pets = new ArrayList<>();
-        ArrayList<String> petCarouselImgs = new ArrayList<>();
-        petCarouselImgs.add("https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg");
-        petCarouselImgs.add("https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg");
-
-        Pet nobi = new Pet("Nobi","Dog","Pomeranian","https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg");
-        nobi.setCarouselImageUrl(petCarouselImgs);
-        pets.add(nobi);
-
-        Pet bella = new Pet("Bella", "Dog", "Pomeranian", "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg");
-        bella.setCarouselImageUrl(petCarouselImgs);
-        pets.add(bella);
+//        pets = new ArrayList<>();
+//        for(HashMap<String,Object> item : PetLoader.petHashList){
+//            Pet pet = new Pet(item);
+//            pets.add(pet);
+//        }
+        pets = PetLoader.petList;
     }
 }

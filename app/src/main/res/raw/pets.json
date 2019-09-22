@@ -1,0 +1,114 @@
+{
+  "pets": [
+    {
+      "id": 1,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    },
+    {
+      "id": 2,
+      "name": "Oreo",
+      "type": "Cat",
+      "breed": "Sphinx",
+      "continent": "Jakarta",
+      "owner": "Davis",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.purina.com.au/-/media/project/purina/main/breeds/cat/mobile/cat_sphynx_mobile.jpg",
+      "carousel": ["https://images2.minutemediacdn.com/image/upload/c_fill,g_auto,h_1248,w_2220/f_auto,q_auto,w_1100/v1555382975/shape/mentalfloss/sphinxhed.png","https://www.pets4homes.co.uk/images/breeds/23/large/3b8609ba22c3becf289d6bba192bd480.jpg"]
+    },
+    {
+      "id": 3,
+      "name": "Jago",
+      "type": "Bird",
+      "breed": "Parrot",
+      "continent": "Padang",
+      "owner": "Mark",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://lafeber.com/pet-birds/wp-content/uploads/2018/06/Indian-Ring-Necked-Parakeet-300x300.jpg",
+      "carousel": ["https://m.telegraphindia.com/unsafe/620x350/smart/static.telegraphindia.com/derivative/THE_TELEGRAPH/1689445/16X9/image426eb8e9-ed07-4d45-8a01-f2d449096c00.jpg"]
+    },
+    {
+      "id": 4,
+      "name": "Buddy",
+      "type": "Dog",
+      "breed": "Golden Retriever",
+      "continent": "Bandung",
+      "owner": "John",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://assets.blog.slice.ca/imageserve/wp-content/uploads/2018/12/12153856/golden-retrievers-face/x.jpg",
+      "carousel": ["https://d.newsweek.com/en/full/714279/golden-retriever.jpg","https://vetstreet-brightspot.s3.amazonaws.com/9f/9b/6ff000df4e4d8e8c70608cf6e0f5/golden-retriever-ap-0johoo-645.jpg"]
+    },
+    {
+      "id": 5,
+      "name": "Sammy",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://upload.wikimedia.org/wikipedia/commons/1/15/White_Persian_Cat.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4396/large/five-personality-traits-of-the-persian-cat-59cbc0cd0f41c.jpg","https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/11_November/physical+attributes+of+Persian+cats+_+cream-colored+cat+with+blue+eyes.jpg","https://d3544la1u8djza.cloudfront.net/APHI/Blog/2016/11_November/grooming+tips+for+a+Persian+cat+_+grumpy+white+Persian+cat+with+green+eyes.jpg"]
+    },
+    {
+      "id": 6,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    },
+    {
+      "id": 7,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    },
+    {
+      "id": 8,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    },
+    {
+      "id": 9,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    },
+    {
+      "id": 10,
+      "name": "Bella",
+      "type": "Dog",
+      "breed": "Pomeranian",
+      "continent": "Bandung",
+      "owner": "Evan",
+      "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi faucibus sollicitudin tincidunt. Pellentesque cursus euismod ex vel maximus. Mauris tempus tempor tempor. Donec semper aliquet risus, sit amet lobortis felis consectetur in. Nullam viverra ante tellus. Donec mattis convallis nisi, id elementum tellus elementum non. Nam et mauris sapien. Proin molestie odio suscipit nunc laoreet condimentum.",
+      "thumbnail": "https://www.petguide.com/wp-content/uploads/2013/02/pomeranian1.jpg",
+      "carousel": ["https://www.pets4homes.co.uk/images/articles/4688/large/how-popular-is-the-pomeranian-dog-breed-5ab0cc9437fb0.jpg","https://g77v3827gg2notadhhw9pew7-wpengine.netdna-ssl.com/wp-content/uploads/2017/09/how-to-train-a-pomeranian_canna-pet-1024x683.jpg"]
+    }
+  ]
+}

@@ -8,7 +8,8 @@
 
     <de.hdodenhof.circleimageview.CircleImageView
         android:layout_width="match_parent"
-        android:layout_height="128dp"
+        android:layout_height="176dp"
+        android:src="@drawable/img_avatar"
         tools:src="@drawable/img_avatar" />
     <TextView
         style="@style/TextTitle"
@@ -17,7 +18,7 @@
         android:text="@string/about_name"
         android:textAlignment="center"
         android:textSize="20sp"
-        android:paddingTop="8dp"/>
+        android:paddingTop="16dp"/>
 
     <TextView
         android:id="@+id/profile_email"
