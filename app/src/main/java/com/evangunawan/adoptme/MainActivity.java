@@ -41,9 +41,11 @@ public class MainActivity extends AppCompatActivity {
             switch (menuItem.getItemId()){
                 case R.id.home_menu:
                     fragment = new AdoptionFragment();
+                    this.setTitle("Available Adoptions");
                     break;
                 case R.id.adopted_pet_menu:
                     fragment = new AdoptedPetFragment();
+                    this.setTitle("My Adoption");
                     break;
             }
             return loadFragment(fragment);

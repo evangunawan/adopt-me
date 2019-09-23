@@ -14,6 +14,7 @@ public class AboutActivity extends AppCompatActivity {
         setContentView(R.layout.activity_aboutme);
         ActionBar actionBar = getSupportActionBar();
         if(actionBar!=null) actionBar.setDisplayHomeAsUpEnabled(true);
+        this.setTitle("About me");
     }
 
     @Override

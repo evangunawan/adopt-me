@@ -14,6 +14,10 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
 
+//This class controls the file input and output to record and keep the adopted pets data.
+//When user adopting a pet, it will write a json object to the device system.
+//It can be modified to load a realtime data from a REST API.
+
 public class FileHandler {
 
     private static FileReader fileReader = null;
@@ -85,6 +89,15 @@ public class FileHandler {
             e.printStackTrace();
         }
         return resultList;
+    }
+
+    public static boolean isIdExist(int petId){
+        for (int x : getAdoptedPetIdList()){
+            if(x == petId){
+                return true;
+            }
+        }
+        return false;
     }
 
     private static void readFile(){

@@ -1,5 +1,7 @@
 package com.evangunawan.adoptme;
 
+import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.graphics.Bitmap;
 import android.os.Bundle;
@@ -9,12 +11,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.ProgressBar;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.Nullable;
 import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
-
-import com.evangunawan.adoptme.Home.AdoptedPetFragment;
 import com.evangunawan.adoptme.Model.Pet;
 import com.evangunawan.adoptme.Util.BitmapHandler;
 import com.evangunawan.adoptme.Util.FileHandler;
@@ -57,11 +58,22 @@ public class PetDetailActivity extends AppCompatActivity {
 
         btnAdopt.setOnClickListener(v -> {
             int petId = targetPet.getPetId();
-            FileHandler.addAdoptedPet(petId);
-            Log.i("FileHandler","Added petID " + petId + ", Size now: " + FileHandler.getAdoptedPetIdList().size());
+            if(FileHandler.isIdExist(petId)){
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Pet is already adopted!").setTitle("Can not adopt!").setPositiveButton("OK", (dialog, which) -> { });
+                builder.create().show();
+            }else {
+                AlertDialog.Builder builder = new AlertDialog.Builder(this);
+                builder.setMessage("Are you sure to adopt this pet?").setTitle(targetPet.getPetTitle())
+                        .setPositiveButton("Yes", (dialog, which) -> {
+                            FileHandler.addAdoptedPet(petId);
+                            Toast.makeText(this,targetPet.getPetTitle() + " adopted! Thank you",Toast.LENGTH_SHORT).show();
+                            this.finish();
+                            Log.i("FileHandler", "Added petID " + petId + ", Size now: " + FileHandler.getAdoptedPetIdList().size());
+                        })
+                        .setNegativeButton("Cancel", (dialog, which) -> {}).create().show();
+            }
         });
-
-
     }
 
     //When called, the ui thread will initialize the CarouselView with the downloaded Image (Bitmap).

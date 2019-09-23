@@ -1,5 +1,6 @@
 package com.evangunawan.adoptme.Home;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.net.Uri;
 import android.os.Bundle;
@@ -15,6 +16,8 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
+import android.widget.Toast;
 
 import com.evangunawan.adoptme.Controller.AdoptedPetAdapter;
 import com.evangunawan.adoptme.Model.Pet;
@@ -29,6 +32,7 @@ public class AdoptedPetFragment extends Fragment implements OnRemoveButtonClickL
     private AdoptedPetAdapter aPetAdapter;
     private RecyclerView aPetRecyclerView;
     private ArrayList<Integer> adoptedPetIds;
+    private TextView txtNone;
 
     public AdoptedPetFragment() {
 
@@ -49,14 +53,19 @@ public class AdoptedPetFragment extends Fragment implements OnRemoveButtonClickL
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         super.onCreateView(inflater, container, savedInstanceState);
         View v = inflater.inflate(R.layout.fragment_adopted_pet, container, false);
-        this.adoptedPetIds = FileHandler.getAdoptedPetIdList();
-        this.aPetAdapter = new AdoptedPetAdapter(adoptedPetIds);
+        adoptedPetIds = FileHandler.getAdoptedPetIdList();
+        aPetAdapter = new AdoptedPetAdapter(adoptedPetIds);
         aPetAdapter.registerRemoveButtonClickListener(this);
+
+        txtNone = v.findViewById(R.id.txtNone);
         aPetRecyclerView = v.findViewById(R.id.adoptedRecView);
+
         aPetRecyclerView.setLayoutManager(new LinearLayoutManager(getActivity(), RecyclerView.VERTICAL,false));
         aPetRecyclerView.setHasFixedSize(true);
         aPetRecyclerView.setAdapter(aPetAdapter);
         aPetAdapter.notifyDataSetChanged();
+
+        if(adoptedPetIds.size()==0) txtNone.setVisibility(View.VISIBLE);
         return v;
     }
 
@@ -68,12 +77,20 @@ public class AdoptedPetFragment extends Fragment implements OnRemoveButtonClickL
 
     @Override
     public void onRemoveButtonClick(Pet petItem, int position) {
-        FileHandler.removeAdoptedPet(petItem.getPetId());
-        aPetAdapter.notifyItemRemoved(position);
-        aPetAdapter.notifyDataSetChanged();
+        AlertDialog.Builder builder = new AlertDialog.Builder(getActivity());
+        builder.setTitle(petItem.getPetTitle()).setMessage("Are you sure to delete this pet?")
+                .setPositiveButton("OK", (dialog, which) -> {
+                    FileHandler.removeAdoptedPet(petItem.getPetId());
+                    aPetAdapter.notifyItemRemoved(position);
+                    aPetAdapter.notifyDataSetChanged();
+                    //Refresh the fragment
+                    getActivity().getSupportFragmentManager().beginTransaction().detach(this).attach(this).commit();
+                    Toast.makeText(getActivity(), "Pet " + petItem.getPetTitle() + " deleted.",Toast.LENGTH_SHORT).show();
+                    Log.i("RemoveEvent","Pet id: " + petItem.getPetId() + " removed.");
+                })
+                .setNegativeButton("CANCEL", (dialog, which) -> {})
+                .create().show();
 
-        //Refresh the fragment
-        getActivity().getSupportFragmentManager().beginTransaction().detach(this).attach(this).commit();
-        Log.i("RemoveEvent","Pet id: " + petItem.getPetId() + " removed.");
+
     }
 }
