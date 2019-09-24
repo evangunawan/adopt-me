@@ -15,4 +15,5 @@
 
     <string name="about_me">About me</string>
     <string name="txtNone">There is no one here, go adopt some! :)</string>
+    <string name="owner_information">Owner Information</string>
 </resources>

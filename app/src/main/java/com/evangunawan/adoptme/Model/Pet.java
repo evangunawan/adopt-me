@@ -52,7 +52,8 @@ public class Pet  implements Serializable {
     public String getThumbnail() {
         return thumbnail;
     }
-
+    public String getPetOwner() { return petOwner; }
+    public String getPetContinent() { return petContinent; }
 //    public void setCarouselImageUrl(ArrayList<String> list){
 //        this.carouselImageUrl = list;
 //    }

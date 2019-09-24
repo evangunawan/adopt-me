@@ -88,9 +88,12 @@ public class PetDetailActivity extends AppCompatActivity {
 
     private void initPetData(Pet pet){
         TextView petTitle = findViewById(R.id.txtPetDetailTitle);
-        petTitle.setText(pet.getPetTitle());
         TextView petSubtitle = findViewById(R.id.txtPetDetailSubtitle);
+        TextView petOwnerInfo = findViewById(R.id.txtOwnerInfo);
+
+        petTitle.setText(pet.getPetTitle());
         petSubtitle.setText(pet.getPetBreed());
+        petOwnerInfo.setText(pet.getPetOwner() + ", " + pet.getPetContinent());
 
         TextView petDesc = findViewById(R.id.txtPetDetailDescription);
         petDesc.setText(pet.getPetDescription());
